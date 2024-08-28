@@ -16,6 +16,10 @@ class Game {
         this.players = []
     }
 }
-const prompt = require('prompt-sync')({sigint: true});
+import * as readline from 'readline';
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 console.clear();
-console.log("How many players will play the game?");
