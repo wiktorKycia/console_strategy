@@ -23,3 +23,16 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 console.clear();
+
+do {
+    rl.question("How many players will play the game?", (answer) => {
+        try {
+            let number_of_players:number = parseInt(answer);
+            break;
+        } catch(e) {
+            console.log(e.message);
+        }
+    })
+} while (true);
+
+const game:Game = new Game();
