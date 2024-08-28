@@ -16,4 +16,6 @@ class Game {
         this.players = []
     }
 }
-
+const prompt = require('prompt-sync')({sigint: true});
+console.clear();
+console.log("How many players will play the game?");
