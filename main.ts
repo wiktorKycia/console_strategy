@@ -23,16 +23,18 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 console.clear();
-
+let flag:boolean = true;
+let number_of_players:number;
 do {
     rl.question("How many players will play the game?", (answer) => {
         try {
-            let number_of_players:number = parseInt(answer);
-            break;
+            number_of_players = parseInt(answer);
+            flag = false;
         } catch(e) {
             console.log(e.message);
         }
+        rl.close();
     })
-} while (true);
-
+} while (flag);
+console.log(number_of_players);
 const game:Game = new Game();
